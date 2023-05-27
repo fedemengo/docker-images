@@ -15,3 +15,6 @@ RUN git clone --branch v1.8.0 https://github.com/google/benchmark.git && \
     cmake -E chdir "build" cmake -DGOOGLETEST_PATH=/googletest -DBENCHMARK_DOWNLOAD_DEPENDENCIES=on -DCMAKE_BUILD_TYPE=Release .. && \
     sudo cmake --build "build" --config Release --target install
 
+# install minor deps
+RUN apk add bash
+
